@@ -14,7 +14,7 @@
 
     <js-module src="www/NotificationHub.js" name="NotificationHub">
         <!--<clobbers target="WindowsAzure.Messaging.NotificationHub" />-->
-        <!--Azure Mobile Srevices override-->
+        <!--Azure Mobile Services override-->
         <clobbers target="WindowsAzureHub.NotificationHub" />
     </js-module>
 
