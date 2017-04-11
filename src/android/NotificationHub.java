@@ -194,6 +194,16 @@ public class NotificationHub extends CordovaPlugin {
             }
 
             resId = context.getResources().getIdentifier("icon", "drawable", pkgName);
+            if (resId != 0) {
+                return resId;
+            }
+
+            resId = context.getResources().getIdentifier("ic_stat_notification", "mipmap", pkgName);
+            if (resId != 0) {
+                return resId;
+            }
+
+            resId = context.getResources().getIdentifier("icon", "mipmap", pkgName);
             return resId;
         }
 
