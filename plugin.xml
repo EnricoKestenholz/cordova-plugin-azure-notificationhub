@@ -50,24 +50,6 @@
                 <param name="android-package" value="msopentech.azure.NotificationHub" />
             </feature>
         </config-file>
-        
-        <config-file target="AndroidManifest.xml" parent="/*">
-            <permission android:name="$PACKAGE_NAME.permission.C2D_MESSAGE" android:protectionLevel="signature" />
-            <uses-permission android:name="$PACKAGE_NAME.permission.C2D_MESSAGE" /> 
-            <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-            <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-            <uses-permission android:name="android.permission.WAKE_LOCK" />
-        </config-file>
-        
-        <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <receiver android:name="msopentech.azure.NotificationHub$PushNotificationReceiver"
-                android:permission="com.google.android.c2dm.permission.SEND">
-                <intent-filter>
-                    <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                    <category android:name="$PACKAGE_NAME" />
-                </intent-filter>
-            </receiver>
-        </config-file>
 
         <framework src="com.android.support:support-v13:23+" />
         <framework src="com.google.android.gms:play-services-gcm:+" />
