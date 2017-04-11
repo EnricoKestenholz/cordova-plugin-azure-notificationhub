@@ -150,10 +150,13 @@
 
 - (void)didReceiveRemoteNotification:(NSNotification *)notif
 {
+    NSMutableDictionary *message = [[NSMutableDictionary alloc] init];
     NSDictionary* userInfo = notif.object;
-    NSDictionary* apsInfo = [userInfo objectForKey:@"aps"];
-    
-    [self reportResult: apsInfo keepCallback:[NSNumber numberWithInteger: TRUE]];
+
+    [message addEntriesFromDictionary: [userInfo objectForKey:@"aps"]];
+    [message addEntriesFromDictionary: [userInfo objectForKey:@"data"]];
+
+    [self reportResult: message keepCallback:[NSNumber numberWithInteger: TRUE]];
 }
 
 -(void)reportResult:(NSDictionary*)result keepCallback:(NSNumber*)keepCalback
