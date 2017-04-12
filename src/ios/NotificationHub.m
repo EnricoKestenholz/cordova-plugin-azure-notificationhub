@@ -26,16 +26,16 @@
     // apply to our custom events since only AppDelegate can receive corresponding events
     // see iOS platform Quirks on plugin home page to get further instructions
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(didRegisterForRemoteNotificationsWithDeviceTokenAzure:)
+                                             selector:@selector(didRegisterForRemoteNotificationsWithDeviceToken:)
                                                  name:@"UIApplicationDidRegisterForRemoteNotifications" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(didFailToRegisterForRemoteNotificationsWithErrorAzure:)
+                                             selector:@selector(didFailToRegisterForRemoteNotificationsWithError:)
                                                  name:@"UIApplicationDidFailToRegisterForRemoteNotifications" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(didReceiveRemoteNotificationAzure:)
-                                                 name:@"UIApplicationdidReceiveRemoteNotificationAzure" object:nil];
+                                             selector:@selector(didReceiveRemoteNotification:)
+                                                 name:@"UIApplicationDidReceiveRemoteNotification" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(didRegisterUserNotificationSettingsAzure:)
+                                             selector:@selector(didRegisterUserNotificationSettings:)
                                                  name:CDVRemoteNotification object:nil];
 }
 
@@ -80,12 +80,12 @@
     }];
     
 }
-- (void)application:(UIApplication *)application didRegisterUserNotificationSettingsAzure:(UIUserNotificationSettings *)notificationSettings
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
 {
     [[UIApplication sharedApplication] registerForRemoteNotifications];
 }
 
-- (void) didRegisterForRemoteNotificationsWithDeviceTokenAzure:(NSNotification *)notif
+- (void) didRegisterForRemoteNotificationsWithDeviceToken:(NSNotification *)notif
 {
     if (self.connectionString == nil || self.notificationHubPath == nil) return;
     
@@ -115,7 +115,7 @@
     }];
 }
 
-- (void) didRegisterForRemoteNotificationsWithDeviceTokenAzureCordova:(NSNotification *)notif
+- (void) didRegisterForRemoteNotificationsWithDeviceTokenCordova:(NSNotification *)notif
 {
     if (self.connectionString == nil || self.notificationHubPath == nil) return;
     
@@ -142,13 +142,13 @@
     }];
 }
 
-- (void)didFailToRegisterForRemoteNotificationsWithErrorAzure:(NSNotification *)notif
+- (void)didFailToRegisterForRemoteNotificationsWithError:(NSNotification *)notif
 {
     NSError* error = notif.object;
     [self failWithError:error];
 }
 
-- (void)didReceiveRemoteNotificationAzure:(NSNotification *)notif
+- (void)didReceiveRemoteNotification:(NSNotification *)notif
 {
     NSMutableDictionary *message = [[NSMutableDictionary alloc] init];
     NSDictionary* userInfo = notif.object;

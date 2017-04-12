@@ -17,23 +17,23 @@
     return [self swizzled_init];
 }
 
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceTokenAzure:(NSData *) deviceToken
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *) deviceToken
 {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"UIApplicationDidRegisterForRemoteNotifications" object:deviceToken];
 }
 
-- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithErrorAzure:(NSError *)error
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
 {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"UIApplicationDidFailToRegisterForRemoteNotifications" object:error];
 }
 
-- (void)application:(UIApplication *)application didReceiveRemoteNotificationAzure:(NSDictionary *)userInfo
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"UIApplicationdidReceiveRemoteNotificationAzure" object:userInfo];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"UIApplicationDidReceiveRemoteNotification" object:userInfo];
 }
 
-- (void)application:(UIApplication *)application didRegisterUserNotificationSettingsAzure:(UIUserNotificationSettings *)notificationSettings {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"UIApplicationdidRegisterUserNotificationSettingsAzure" object:notificationSettings];
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"UIApplicationDidRegisterUserNotificationSettings" object:notificationSettings];
 }
 
 @end
