@@ -32,10 +32,10 @@
 // Asynchronously unregisters the native registration on the application or secondary tiles.
 - (void)unregisterApplication:(CDVInvokedUrlCommand*)command;
 
-- (void)didRegisterForRemoteNotificationsWithDeviceToken:(NSNotification *)notif;
-- (void)didFailToRegisterForRemoteNotificationsWithError:(NSNotification *)notif;
-- (void)didReceiveRemoteNotification:(NSNotification *)notif;
-- (void)didRegisterUserNotificationSettings:(NSNotification *)notif;
+- (void)didRegisterForRemoteNotificationsWithDeviceTokenAzure:(NSNotification *)notif;
+- (void)didFailToRegisterForRemoteNotificationsWithErrorAzure:(NSNotification *)notif;
+- (void)didReceiveRemoteNotificationAzure:(NSNotification *)notif;
+- (void)didRegisterUserNotificationSettingsAzure:(NSNotification *)notif;
 
 @end
 
