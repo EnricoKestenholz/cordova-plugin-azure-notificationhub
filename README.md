@@ -5,18 +5,7 @@ Exposes Windows Azure [Notification Hubs](http://www.windowsazure.com/en-us/serv
 
 ### Sample usage ###
 
-    var connectionString = "Endpoint=sb://[service bus name space].servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=[notification hub full key]",
-        notificationHubPath = "[notification hub name]";
-
-    var hub = new WindowsAzure.Messaging.NotificationHub(notificationHubPath, connectionString);
-
-    hub.registerApplicationAsync().then(function (result) {
-        console.log("Registration successful: " + result.registrationId);
-    });
-
-    hub.onPushNotificationReceived = function (msg) {
-        console.log("Push Notification received: " + msg);
-    };;
+Integration wiht phonegap-plugin-push version 10.2.1
 
 ### Copyrights ###
 Licensed under the Apache License, Version 2.0 (the "License");
