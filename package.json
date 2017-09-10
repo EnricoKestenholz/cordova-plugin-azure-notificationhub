@@ -1,0 +1,36 @@
+{
+    "name":"Azure Notification Hub",
+    "version":"0.0.1",
+    "description":"Cordova Azure Notification Hub Plugin",
+    "cordova":{
+        "id":"com.verso.cordova.clipboard",
+        "platforms":[
+            "ios",
+            "android",
+            "wp8"
+        ]
+    },
+    "repository":{
+        "type":"git",
+        "url":"git+https://github.com/aleppos/cordova-plugin-azure-notificationhub.git"
+    },
+    "keywords":[
+        "cordova",
+        "azure",
+        "push",
+        "notifications",
+        "hub",
+        "cordova-android",
+        "cordova-wp8"
+    ],
+    "engines":{
+        "name":"cordova",
+        "version":">=3.0.0"
+    },
+    "author":"",
+    "license":"Apache 2.0",
+    "bugs":{
+        "url":"https://github.com/aleppos/cordova-plugin-azure-notificationhub/issues"
+    },
+    "homepage":"https://github.com/aleppos/cordova-plugin-azure-notificationhub"
+}
