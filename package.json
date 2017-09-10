@@ -1,5 +1,5 @@
 {
-    "name":"Azure Notification Hub",
+    "name":"azure-notification-hub",
     "version":"0.0.1",
     "description":"Cordova Azure Notification Hub Plugin",
     "cordova":{
