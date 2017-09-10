@@ -3,7 +3,7 @@
     "version":"0.0.1",
     "description":"Cordova Azure Notification Hub Plugin",
     "cordova":{
-        "id":"com.verso.cordova.clipboard",
+        "id":"msopentech.azure.NotificationHub",
         "platforms":[
             "ios",
             "android",
