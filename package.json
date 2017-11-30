@@ -1,36 +1,43 @@
 {
-    "name":"azure-notification-hub",
-    "version":"0.0.2",
-    "description":"Cordova Azure Notification Hub Plugin",
-    "cordova":{
-        "id":"msopentech.azure.NotificationHub",
-        "platforms":[
-            "ios",
-            "android",
-            "wp8"
-        ]
-    },
-    "repository":{
-        "type":"git",
-        "url":"git+https://github.com/aleppos/cordova-plugin-azure-notificationhub.git"
-    },
-    "keywords":[
-        "cordova",
-        "azure",
-        "push",
-        "notifications",
-        "hub",
-        "cordova-android",
-        "cordova-wp8"
-    ],
-    "engines":{
-        "name":"cordova",
-        "version":">=3.0.0"
-    },
-    "author":"",
-    "license":"Apache 2.0",
-    "bugs":{
-        "url":"https://github.com/aleppos/cordova-plugin-azure-notificationhub/issues"
-    },
-    "homepage":"https://github.com/aleppos/cordova-plugin-azure-notificationhub"
+  "name": "azure-notification-hub",
+  "version": "0.1.0",
+  "description": "Cordova Azure Notification Hub Plugin",
+  "cordova": {
+    "id": "msopentech.azure.NotificationHub",
+    "platforms": [
+      "ios",
+      "android",
+      "wp8"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tioSupport/cordova-plugin-azure-notificationhub.git"
+  },
+  "keywords": [
+    "cordova",
+    "azure",
+    "push",
+    "notifications",
+    "hub",
+    "cordova-android",
+    "cordova-wp8"
+  ],
+  "engines": {
+    "name": "cordova",
+    "version": ">=3.0.0"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/tioSupport/cordova-plugin-azure-notificationhub/issues"
+  },
+  "homepage": "https://github.com/tioSupport/cordova-plugin-azure-notificationhub",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }

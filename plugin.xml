@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="msopentech.azure.NotificationHub" version="0.0.2">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android"
+    id="msopentech.azure.NotificationHub" version="0.1.0">
 
     <name>Azure Notification Hub</name>
 
     <description>Cordova Azure Notification Hub Plugin</description>
-    <license>Apache 2.0</license>
+    <license>Apache 2-0</license>
     <keywords>cordova, azure, push, notifications, hub</keywords>
-    <repo>https://github.com/sgrebnov/cordova-plugin-azure-notificationhub</repo>
-    <issue>https://github.com/sgrebnov/cordova-plugin-azure-notificationhub/issues</issue>
+    <repo>https://github.com/tioSupport/cordova-plugin-azure-notificationhub</repo>
+    <issue>https://github.com/tioSupport/cordova-plugin-azure-notificationhub/issues</issue>
 
     <js-module src="www/Promise.js" name="Promise"/>
 
