@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="msopentech.azure.NotificationHub" version="0.0.1">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="msopentech.azure.NotificationHub" version="0.0.2">
 
     <name>Azure Notification Hub</name>
 
@@ -9,7 +9,7 @@
     <keywords>cordova, azure, push, notifications, hub</keywords>
     <repo>https://github.com/sgrebnov/cordova-plugin-azure-notificationhub</repo>
     <issue>https://github.com/sgrebnov/cordova-plugin-azure-notificationhub/issues</issue>
-    
+
     <js-module src="www/Promise.js" name="Promise"/>
 
     <js-module src="www/NotificationHub.js" name="NotificationHub">
@@ -53,13 +53,10 @@
 
         <framework src="com.android.support:support-v13:23+" />
         <framework src="com.google.android.gms:play-services-gcm:+" />
-        
         <source-file src="src/android/NotificationHub.java" target-dir="src/msopentech/azure" />
 
         <lib-file src="src/android/notification-hubs-android-sdk-0.4.jar" />
-        
     </platform>
-    
     <!-- ios -->
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
@@ -73,5 +70,4 @@
         <source-file src="src/ios/AppDelegate+AzureNotifications.m" />
         <framework src="src/ios/WindowsAzureMessaging.framework" custom="true" />
     </platform>
-    
 </plugin>
