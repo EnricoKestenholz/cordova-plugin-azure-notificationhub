@@ -13,7 +13,10 @@
 static char launchNotificationKey;
 static char coldstartKey;
 
+NSString *const pushPluginApplicationDidBecomeActiveNotification = @"pushPluginApplicationDidBecomeActiveNotification";
+
 @implementation AppDelegate (AzureNotifications)
+
 
 + (void)load {
     Method original, swizzled;
