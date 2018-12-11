@@ -1,28 +1,19 @@
 {
-  "name": "azure-notification-hub",
+  "name": "cordova-plugin-azure-NotificationHu",
   "version": "0.2.2",
-  "description": "Cordova Azure Notification Hub Plugin",
-  "cordova": {
-    "id": "cordova-plugin-azure-NotificationHub",
-    "platforms": ["ios", "android", "wp8"]
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tioSupport/cordova-plugin-azure-notificationhub.git"
   },
-  "keywords": ["cordova", "azure", "push", "notifications", "hub", "cordova-android", "cordova-wp8"],
-  "engines": {
-    "name": "cordova",
-    "version": ">=3.0.0"
-  },
   "author": "",
-  "license": "Apache-2.0",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/tioSupport/cordova-plugin-azure-notificationhub/issues"
   },
-  "homepage": "https://github.com/tioSupport/cordova-plugin-azure-notificationhub",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  "homepage": "https://github.com/tioSupport/cordova-plugin-azure-notificationhub#readme"
 }
