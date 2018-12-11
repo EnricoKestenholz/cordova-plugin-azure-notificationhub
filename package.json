@@ -1,28 +1,16 @@
 {
   "name": "azure-notification-hub",
-  "version": "0.1.1",
+  "version": "0.2.2",
   "description": "Cordova Azure Notification Hub Plugin",
   "cordova": {
     "id": "msopentech.azure.NotificationHub",
-    "platforms": [
-      "ios",
-      "android",
-      "wp8"
-    ]
+    "platforms": ["ios", "android", "wp8"]
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tioSupport/cordova-plugin-azure-notificationhub.git"
   },
-  "keywords": [
-    "cordova",
-    "azure",
-    "push",
-    "notifications",
-    "hub",
-    "cordova-android",
-    "cordova-wp8"
-  ],
+  "keywords": ["cordova", "azure", "push", "notifications", "hub", "cordova-android", "cordova-wp8"],
   "engines": {
     "name": "cordova",
     "version": ">=3.0.0"
