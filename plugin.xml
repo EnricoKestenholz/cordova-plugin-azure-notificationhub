@@ -1,49 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android"
     id="msopentech.azure.NotificationHub" version="0.2.2">
-
     <name>Azure Notification Hub</name>
-
     <description>Cordova Azure Notification Hub Plugin</description>
     <license>Apache 2-0</license>
     <keywords>cordova, azure, push, notifications, hub</keywords>
     <repo>https://github.com/tioSupport/cordova-plugin-azure-notificationhub</repo>
     <issue>https://github.com/tioSupport/cordova-plugin-azure-notificationhub/issues</issue>
-
     <js-module src="www/Promise.js" name="Promise"/>
-
     <js-module src="www/NotificationHub.js" name="NotificationHub">
         <!--<clobbers target="WindowsAzure.Messaging.NotificationHub" />-->
         <!--Azure Mobile Services override-->
         <clobbers target="WindowsAzureHub.NotificationHub" />
     </js-module>
-
-    <!-- Windows Phone -->
-    <platform name="wp8">
-        <config-file target="config.xml" parent="/*">
-            <feature name="NotificationHub">
-                <param name="wp-package" value="NotificationHub"/>
-            </feature>
-        </config-file>
-
-        <config-file target="Properties/WMAppManifest.xml" parent="/Deployment/App/Capabilities">
-            <Capability Name="ID_CAP_PUSH_NOTIFICATION"/>
-        </config-file>
-
-        <framework src="src/wp/Microsoft.WindowsAzure.Messaging.dll" custom="true"/>
-        <source-file src="src/wp/NotificationHub.cs" />
-    </platform>
-
-    <!-- windows8 -->
-    <platform name="windows8">
-        <framework src="src/windows8/Microsoft.WindowsAzure.Messaging.Managed.dll" custom="true"/>
-        <framework src="src/windows8/NotificationHubRuntimeProxy.winmd" custom="true"/>
-        <js-module src="src/windows8/NotificationHubProxy.js" name="NotificationHubProxy" >
-            <clobbers target="" />
-        </js-module>
-    </platform>
-
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
@@ -51,11 +20,9 @@
                 <param name="android-package" value="msopentech.azure.NotificationHub" />
             </feature>
         </config-file>
-
         <framework src="com.android.support:support-v13:23+" />
         <framework src="com.google.android.gms:play-services-gcm:+" />
         <source-file src="src/android/NotificationHub.java" target-dir="src/msopentech/azure" />
-
         <lib-file src="src/android/notification-hubs-android-sdk-0.4.jar" />
     </platform>
     <!-- ios -->
