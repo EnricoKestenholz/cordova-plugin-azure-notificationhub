@@ -3,7 +3,7 @@
   "version": "0.2.2",
   "description": "Cordova Azure Notification Hub Plugin",
   "cordova": {
-    "id": "msopentech.azure.NotificationHub",
+    "id": "cordova-plugin-azure-NotificationHub",
     "platforms": ["ios", "android", "wp8"]
   },
   "repository": {
@@ -22,9 +22,6 @@
   },
   "homepage": "https://github.com/tioSupport/cordova-plugin-azure-notificationhub",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   }
